@@ -1,6 +1,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
+FRAMEWORKS_BASE_SUBDIRS += ../../$(LOCAL_PATH)/ril/
+
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 #DEVICE_PACKAGE_OVERLAYS := device/huawei/u8800pro/overlay
@@ -129,7 +131,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libril-qc-1.so \
     rild.libargs=-d /dev/smd0 \
-    ro.telephony.ril_class=lgeqcom \
+    ro.telephony.ril_class=HuaweiQualcommRIL \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=180 \
     ro.config.wifi_chip_is_bcm=true \
