@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += \
     gps.u8800pro \
     lights.u8800pro \
     gralloc.u8800pro \
+    camera.u8800pro \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
