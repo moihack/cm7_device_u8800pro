@@ -1,8 +1,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-FRAMEWORKS_BASE_SUBDIRS += ../../$(LOCAL_PATH)/ril/
-
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 #DEVICE_PACKAGE_OVERLAYS := device/huawei/u8800pro/overlay
@@ -131,7 +129,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libril-qc-1.so \
     rild.libargs=-d /dev/smd0 \
-    ro.telephony.ril_class=HuaweiQualcommRIL \
+    ro.telephony.ril_class=lgeqcom \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=180 \
     ro.config.wifi_chip_is_bcm=true \
@@ -199,4 +197,4 @@ $(call inherit-product-if-exists, addon/addon.mk)
 $(call inherit-product-if-exists, device/huawei/u8800pro/wifi/wifi.mk)
 
 # common msm7x30 configs
-# $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
+$(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
