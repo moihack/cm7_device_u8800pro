@@ -3,7 +3,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
-#DEVICE_PACKAGE_OVERLAYS := device/huawei/u8800pro/overlay
+DEVICE_PACKAGE_OVERLAYS := device/huawei/u8800pro/overlay
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := u8800pro
