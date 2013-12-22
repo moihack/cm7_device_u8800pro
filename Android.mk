@@ -13,5 +13,5 @@
 # limitations under the License.
 
 ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),u8800pro)
-include $(call all-named-subdir-makefiles,libgralloc liblights libcamera libril libaudio wifi patch)
+include $(call all-named-subdir-makefiles,libgralloc liblights libcamera libril wifi patch)
 endif

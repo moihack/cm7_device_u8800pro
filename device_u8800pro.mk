@@ -17,6 +17,9 @@ $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 # CM7 prebuilts
 $(call inherit-product, vendor/cyanogen/products/common.mk)
 
+# CM7 themes
+$(call inherit-product, vendor/cyanogen/products/themes.mk)
+
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := u8800pro
 PRODUCT_DEVICE := u8800pro
@@ -35,7 +38,6 @@ PRODUCT_PACKAGES += \
     lights.u8800pro \
     gralloc.u8800pro \
     camera.u8800pro \
-    audio.u8800pro \
     dexpreopt \
     Torch \   
     
@@ -93,7 +95,6 @@ PRODUCT_COPY_FILES += \
     
 # prebuilt
 PRODUCT_COPY_FILES += \
-    device/huawei/u8800pro/prebuilt/libhardware_legacy.so:/system/lib/libhardware_legacy.so \
     device/huawei/u8800pro/prebuilt/overlay.default.so:/system/lib/hw/overlay.default.so \
     device/huawei/u8800pro/prebuilt/BCM4329.hcd:/system/etc/bluetooth/BCM4329.hcd \
     device/huawei/u8800pro/prebuilt/dhd.ko:/system/wifi/dhd.ko
