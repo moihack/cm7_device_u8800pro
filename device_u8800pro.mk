@@ -39,8 +39,9 @@ PRODUCT_PACKAGES += \
     gralloc.u8800pro \
     camera.u8800pro \
     dexpreopt \
-    Torch \   
     AicBootFix \
+    Torch \   
+    
     
 # proprietary side of the device
 $(call inherit-product-if-exists, vendor/huawei/u8800pro/u8800pro-vendor.mk)
@@ -170,7 +171,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Tinkerbell.ogg \
     ro.config.alarm_alert=Alarm_Classic.ogg \
     ro.config.ringtone=Ring_Digital_02.ogg \
-    ro.setupwizard.mode=DISABLED
+    ro.setupwizard.mode=OPTIONAL
 
 # addon by Geno
 $(call inherit-product-if-exists, addon/addon.mk)
