@@ -14,11 +14,8 @@ $(call inherit-product, vendor/cyanogen/products/gsm.mk)
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 
-# CM7 prebuilts
-$(call inherit-product, vendor/cyanogen/products/common.mk)
-
-# CM7 themes
-$(call inherit-product, vendor/cyanogen/products/themes.mk)
+# CM stuff
+$(call inherit-product, vendor/cyanogen/products/common_full.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := u8800pro
@@ -41,7 +38,6 @@ PRODUCT_PACKAGES += \
     dexpreopt \
     AicBootFix \
     Torch \   
-    
     
 # proprietary side of the device
 $(call inherit-product-if-exists, vendor/huawei/u8800pro/u8800pro-vendor.mk)

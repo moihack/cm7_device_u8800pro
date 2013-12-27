@@ -11,13 +11,14 @@ Proceed with caution!
 3) open updater-script (with notepad++ preferably)
 
 4) delete the following lines:
+    
     assert(getprop("ro.product.device") == "u8800pro" || getprop("ro.build.product") == "u8800pro" || getprop("ro.product.board") == "u8800pro");
     
     package_extract_dir("recovery", "/system");
     
     package_extract_file("boot.img", "/dev/block/mmcblk0p1");
     
- Make sure to delete especially the last one since leaving it there will copy the boot.img to wrong location erasing your phone's image folder (pink screen -> blue screen)
+Make sure to delete especially the last one since leaving it there will copy the boot.img to wrong location erasing your phone's image folder (pink screen -> blue screen)
  
 5) add the following lines at the end of the updater-script:
 
@@ -25,7 +26,7 @@ Proceed with caution!
      package_extract_file("boot.img", "/cust/image/boot.img");
      unmount("/cust");
     
- This should copy the boot.img to your phone's image folder correctly
+This should copy the boot.img to your phone's image folder correctly
 
 -----------------------------------------------------------------------
 Optional Steps:
@@ -37,4 +38,4 @@ Otherwise .zip will not be flashable!!!
 
 -----------------------------------------------------------------------
 
-Obviously, re-zip the three files META-INF,system & boot.img
+Obviously, re-zip META-INF & system folders and boot.img back to a new .zip file.
